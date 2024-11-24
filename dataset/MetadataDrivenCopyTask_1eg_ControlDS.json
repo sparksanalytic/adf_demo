@@ -1,0 +1,20 @@
+{
+	"name": "MetadataDrivenCopyTask_1eg_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LSsql",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_1eg_20211206"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbllogic"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

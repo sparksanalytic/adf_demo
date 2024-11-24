@@ -1,0 +1,17 @@
+{
+	"name": "sparksanalyticadf",
+	"properties": {
+		"globalParameters": {
+			"GL_KV_NAME": {
+				"type": "string",
+				"value": "''"
+			}
+		}
+	},
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cbb47067-d9bd-4e93-afb8-43ee85b7fca7",
+		"tenantId": "9bf909aa-ee9a-4dd0-ba7e-c77f815d33c3"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"name": "LSadls2Service",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sparksanalytic.dfs.core.windows.net ",
+			"tenant": "9bf909aa-ee9a-4dd0-ba7e-c77f815d33c3",
+			"servicePrincipalId": "1970fc3f-8626-4c8c-bd5f-ed7ee6e6c815",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDQ5MzYwMzNELTA2QTMtNEMzNy1BNDkyLTAyQ0NCQkU3MjU2NV9hYmVjMDE4Yi0yYmY5LTRhMjAtYTBiOS05OTE4Y2NkZTVhODQiDQp9"
+		}
+	}
+}
