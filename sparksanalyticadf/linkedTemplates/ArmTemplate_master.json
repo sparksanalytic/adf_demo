@@ -1,0 +1,105 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "sparksanalyticadf"
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSynapseAnalytics1'"
+		},
+		"LSSynapse_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LSSynapse'"
+		},
+		"LSadls2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LSadls2'"
+		},
+		"LSadls2Service_servicePrincipalCredential": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalCredential' of 'LSadls2Service'"
+		},
+		"LSsql_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LSsql'"
+		},
+		"LSadls2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sparksanalytic.dfs.core.windows.net"
+		},
+		"LSadls2Service_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sparksanalytic.dfs.core.windows.net "
+		},
+		"LSadls2Service_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "9bf909aa-ee9a-4dd0-ba7e-c77f815d33c3"
+		},
+		"LSadls2Service_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "1970fc3f-8626-4c8c-bd5f-ed7ee6e6c815"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "sparksanalyticadf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSynapseAnalytics1_connectionString": {
+						"value": "[parameters('AzureSynapseAnalytics1_connectionString')]"
+					},
+					"LSSynapse_connectionString": {
+						"value": "[parameters('LSSynapse_connectionString')]"
+					},
+					"LSadls2_accountKey": {
+						"value": "[parameters('LSadls2_accountKey')]"
+					},
+					"LSadls2Service_servicePrincipalCredential": {
+						"value": "[parameters('LSadls2Service_servicePrincipalCredential')]"
+					},
+					"LSsql_connectionString": {
+						"value": "[parameters('LSsql_connectionString')]"
+					},
+					"LSadls2_properties_typeProperties_url": {
+						"value": "[parameters('LSadls2_properties_typeProperties_url')]"
+					},
+					"LSadls2Service_properties_typeProperties_url": {
+						"value": "[parameters('LSadls2Service_properties_typeProperties_url')]"
+					},
+					"LSadls2Service_properties_typeProperties_tenant": {
+						"value": "[parameters('LSadls2Service_properties_typeProperties_tenant')]"
+					},
+					"LSadls2Service_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('LSadls2Service_properties_typeProperties_servicePrincipalId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

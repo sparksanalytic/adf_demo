@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "sparksanalyticadf"
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
+		"LSSynapse_connectionString": {
+			"value": ""
+		},
+		"LSadls2_accountKey": {
+			"value": ""
+		},
+		"LSadls2Service_servicePrincipalCredential": {
+			"value": ""
+		},
+		"LSsql_connectionString": {
+			"value": ""
+		},
+		"LSadls2_properties_typeProperties_url": {
+			"value": "https://sparksanalytic.dfs.core.windows.net"
+		},
+		"LSadls2Service_properties_typeProperties_url": {
+			"value": "https://sparksanalytic.dfs.core.windows.net "
+		},
+		"LSadls2Service_properties_typeProperties_tenant": {
+			"value": "9bf909aa-ee9a-4dd0-ba7e-c77f815d33c3"
+		},
+		"LSadls2Service_properties_typeProperties_servicePrincipalId": {
+			"value": "1970fc3f-8626-4c8c-bd5f-ed7ee6e6c815"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
